@@ -1,4 +1,4 @@
-# Heat Where the Map Is Empty: Hot Cities, Blind Sensors
+# Heat Where the Map Is Empty? Satellite LST Meets Sparse Ground Sensors
 
 ## Abstract bullets
 - Satellite LST looks complete; ground sensors are sparse.
@@ -33,3 +33,17 @@ Grid LST (synthetic or satellite); station buffer coverage; heat percentile × c
 - Table 1: % top-decile cells uncovered
 - Fig 1: LST map + station dots + blind mask
 - Table 2: ward scores (heat × blindness)
+
+
+## Paper type & scope (q34 upgrade)
+Short conference paper: **reproducible audit protocol** (subtitle tag: Protocol & Synthetic Demonstration).
+
+*This paper presents a reproducible audit protocol demonstrated on synthetic/proxy data; a REAL_DATA path is documented for follow-on measurement, not claimed as completed observation.*
+
+**Limitations.** Synthetic/PROXY demonstration only; REAL_DATA path documented (README) but not run; contribution is an audit metric, not a first discovery; no journal-tier or indexing claim.
+
+## Camera-ready figure captions
+- Fig. 1 (`results/city_map.{pdf,svg,png}`): Synthetic city, seed 42. (a) LST with 12 stations and coverage buffers. (b) Top-decile heat cells, covered (blue) vs blind (orange). (c) Hot-and-blind cells over the 4×4 ward grid with ward ids.
+- Fig. 2 (`results/multi_seed_excess.{pdf,svg,png}`): Excess of uncovered-heat share over the placement null across 10 seeds; dashed = 0, solid = mean. All seeds below zero.
+
+Figures: 300 dpi PNG + vector PDF/SVG, ≥9 pt fonts, Okabe–Ito / viridis-family palettes; regenerate with `python src/make_figures.py` (reads frozen results/seeds, never rewrites CSV/JSON).

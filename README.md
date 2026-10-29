@@ -31,3 +31,14 @@ Outputs: `results/heat_missingness.csv`, `results/city_map.png`, `results/summar
 
 ## Independence
 Shares **no** code or data with `ghost-carbon` or `forest-lies-on-paper`.
+
+## Paper type & scope
+Conference short paper presenting a **reproducible audit protocol**. *This paper presents a reproducible audit protocol demonstrated on synthetic/proxy data; a REAL_DATA path is documented for follow-on measurement, not claimed as completed observation.*
+
+**Limitations:** synthetic/PROXY demo numbers only; REAL_DATA slice below is documented, not run; audit-metric contribution, not “first ever”; no journal-tier claim.
+
+## Camera-ready figures
+`python src/make_figures.py` → 300 dpi PNG + PDF + SVG in `results/` (same seeds/CSVs; numbers unchanged).
+
+## REAL_DATA slice recipe (exact, not yet run)
+One city slice: OpenAQ v3 locations API (temperature or PM2.5 stations) for a city bbox (e.g., Hanoi 20.9–21.15°N, 105.7–105.95°E) → `data/stations.csv`; MODIS MOD11A1 daytime LST (1 km) summer composite for the same bbox → GeoTIFF; regrid to 1 km; buffer r = 1–2 km; rerun the same metrics + 200-perm null + ward score using administrative wards; record CRS, dates, station ids in `results/data_manifest.json`.

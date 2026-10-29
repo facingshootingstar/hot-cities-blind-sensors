@@ -2,10 +2,10 @@
 
 **Title:** Heat Where the Map Is Empty? Satellite LST Meets Sparse Ground Sensors
 
-**Subtitle:** A complete heat map is not a monitored city — but blindness has to be measured, not assumed
+**Subtitle:** A complete heat map is not a monitored city — but blindness has to be measured, not assumed — Protocol & Synthetic Demonstration
 
 **Abstract.**
-Satellite land-surface temperature (LST) maps look spatially complete; ground stations do not. On this synthetic seed (64×64, 12 stations), **46%** of top-decile heat cells lack a station buffer, but excess vs permutation null is **-0.24** (heat lies nearer stations than chance); ward-level heat×blindness scores still flag priorities (e.g. ward 6)—so a complete LST map is not the same as monitored heat where coverage fails. Unlike SUHI-vs-CUHI comparisons or IoT gap-filling studies, we audit where the hottest LST cells fall relative to station coverage, against a placement null. REAL_DATA path: OpenAQ + MODIS/ERA5 (README).
+Satellite land-surface temperature (LST) maps look spatially complete; ground stations do not. On this synthetic seed (64×64, 12 stations), **46%** of top-decile heat cells lack a station buffer, but excess vs permutation null is **-0.24** (heat lies nearer stations than chance); ward-level heat×blindness scores still flag priorities (e.g. ward 6)—so a complete LST map is not the same as monitored heat where coverage fails. Unlike SUHI-vs-CUHI comparisons or IoT gap-filling studies, we audit where the hottest LST cells fall relative to station coverage, against a placement null. REAL_DATA path: OpenAQ + MODIS/ERA5 (README). *This paper presents a reproducible audit protocol demonstrated on synthetic/proxy data; a REAL_DATA path is documented for follow-on measurement, not claimed as completed observation.*
 
 **Keywords:** urban heat island, sensor equity, LST, OpenAQ, permutation null
 
@@ -25,4 +25,4 @@ Satellite LST is widely used to fill data gaps where ground stations are sparse,
 4. Sakthivel, P., Sengupta, R. (2025). Spatial bias in placement of citizen and conventional weather stations and their impact on urban climate research: A case study of the Urban Heat Island effect in Canada. Urban Climate 59, 102280. https://www.sciencedirect.com/science/article/pii/S2212095524004772
 5. Zhou, D., Xiao, J., Bonafoni, S., et al. (2019). Satellite Remote Sensing of Surface Urban Heat Islands: Progress, Challenges, and Perspectives. Remote Sensing 11(1), 48. https://doi.org/10.3390/rs11010048
 
-**Scope note:** SYNTHETIC city grid, single seed; excess vs null is negative (-0.239).
+**Scope note:** SYNTHETIC city grid; seed-42 excess vs null -0.239; 10-seed mean -0.32 ± 0.10, negative in 100% of seeds.
