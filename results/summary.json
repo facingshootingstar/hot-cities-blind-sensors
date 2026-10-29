@@ -1,0 +1,13 @@
+{
+  "mode": "SYNTHETIC_city_grid",
+  "grid": 64,
+  "n_stations": 12,
+  "radius_cells": 6.0,
+  "heat_percentile": 90,
+  "lst_threshold_c": 36.94550440071261,
+  "frac_heat_cells_uncovered": 0.4609756097560976,
+  "frac_city_uncovered": 0.8212890625,
+  "null_mean_frac_heat_uncovered": 0.7001341463414633,
+  "excess_vs_null": -0.23915853658536573,
+  "note": "Replace with OpenAQ + MODIS/ERA5 per README REAL_DATA"
+}
