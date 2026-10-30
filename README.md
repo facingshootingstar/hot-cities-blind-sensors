@@ -23,7 +23,20 @@ python src/run_experiment.py
 ```
 Outputs: `results/heat_missingness.csv`, `results/city_map.png`, `results/summary.json`.
 
-Kaggle (executed, v3): https://www.kaggle.com/code/drowningcraft/hot-cities-heat-where-the-map-is-empty — `notebooks/hot_cities.ipynb` also runs seeds 42–51 and reproduces `results/multi_seed.csv` and `results/heat_missingness.csv` exactly.
+Kaggle (executed): https://www.kaggle.com/code/drowningcraft/hot-cities-heat-where-the-map-is-empty — `notebooks/hot_cities.ipynb` also runs seeds 42–51 and reproduces `results/multi_seed.csv` and `results/heat_missingness.csv` exactly.
+
+## v4 extensions (`src/run_extended.py`)
+```bash
+python src/run_extended.py
+```
+Positive control and robustness, without changing any locked number (the `core` scenario at k=12, r=6, p90 reproduces `results/multi_seed.csv` exactly):
+- **Placement scenarios** on the same synthetic city per seed: `core` (paper design), `uniform` (null-like), `periphery` (stations > 0.30n from the core centre).
+- **Monte Carlo p-values** from the 200 null draws (`p_upper`: heat more blind than chance; `p_lower`: less blind).
+- **Calibration / power** over 100 seeds (42–141): `results/ext_calibration.csv`.
+- **One-at-a-time sensitivity** k ∈ {6, 24}, r ∈ {3, 9}, percentile ∈ {80, 95}: `results/ext_sensitivity.csv`.
+- **Normalised ward score** (min-max ward LST × blind fraction): `results/ext_wards_seed42.csv`.
+
+The `ext_*` files in `results/` were produced by the executed Kaggle run (notebook v4).
 
 ## REAL_DATA steps (when network / API available)
 1. Download OpenAQ measurements (temp/PM) for a city → `data/openaq_sample.csv`.

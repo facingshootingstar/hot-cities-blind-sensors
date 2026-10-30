@@ -1,0 +1,79 @@
+{
+  "mode": "SYNTHETIC_city_grid_v4_extensions",
+  "n_perm": 200,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "calibration_seeds": "42-141",
+  "periphery_min_dist_frac": 0.3,
+  "scenarios_10seeds": {
+    "core": {
+      "E_mean": -0.31520243902439027,
+      "E_sd": 0.09764826349238133,
+      "B_h_mean": 0.39731707317073167,
+      "frac_E_pos": 0.0,
+      "n_p_upper_05": 0,
+      "n_p_lower_05": 6
+    },
+    "periphery": {
+      "E_mean": 0.2098060975609756,
+      "E_sd": 0.0598635540247094,
+      "B_h_mean": 0.9231707317073171,
+      "frac_E_pos": 1.0,
+      "n_p_upper_05": 3,
+      "n_p_lower_05": 0
+    },
+    "uniform": {
+      "E_mean": -0.03911463414634141,
+      "E_sd": 0.24655585060545024,
+      "B_h_mean": 0.6726829268292683,
+      "frac_E_pos": 0.5,
+      "n_p_upper_05": 2,
+      "n_p_lower_05": 1
+    }
+  },
+  "calibration_100seeds": [
+    {
+      "scenario": "core",
+      "E_mean": -0.3470768292682927,
+      "E_sd": 0.10294404063906566,
+      "frac_E_pos": 0.0,
+      "rate_p_upper_05": 0.0,
+      "rate_p_lower_05": 0.66
+    },
+    {
+      "scenario": "uniform",
+      "E_mean": -0.004879512195121958,
+      "E_sd": 0.17324063755693314,
+      "frac_E_pos": 0.57,
+      "rate_p_upper_05": 0.03,
+      "rate_p_lower_05": 0.05
+    },
+    {
+      "scenario": "periphery",
+      "E_mean": 0.23291890243902436,
+      "E_sd": 0.05946850191628478,
+      "frac_E_pos": 1.0,
+      "rate_p_upper_05": 0.44,
+      "rate_p_lower_05": 0.0
+    }
+  ],
+  "core_top_ward_raw_counts": {
+    "7": 7,
+    "6": 2,
+    "2": 1
+  },
+  "core_top_ward_norm_counts": {
+    "6": 9,
+    "5": 1
+  }
+}
