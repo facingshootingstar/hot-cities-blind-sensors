@@ -23,6 +23,8 @@ python src/run_experiment.py
 ```
 Outputs: `results/heat_missingness.csv`, `results/city_map.png`, `results/summary.json`.
 
+Kaggle (executed, v3): https://www.kaggle.com/code/drowningcraft/hot-cities-heat-where-the-map-is-empty — `notebooks/hot_cities.ipynb` also runs seeds 42–51 and reproduces `results/multi_seed.csv` and `results/heat_missingness.csv` exactly.
+
 ## REAL_DATA steps (when network / API available)
 1. Download OpenAQ measurements (temp/PM) for a city → `data/openaq_sample.csv`.
 2. Fetch MODIS LST or ERA5-Land 2m temp for the same bbox → GeoTIFF / NetCDF under `data/`.
